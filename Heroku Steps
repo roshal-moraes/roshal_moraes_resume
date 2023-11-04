@@ -1,0 +1,60 @@
+Prerequisites:
+
+You should already have your Flask web application code in a Git repository.
+Step 1: Install Heroku CLI
+
+If you haven't already, install the Heroku Command Line Interface (CLI) for your operating system.
+
+Step 2: Login to Heroku
+
+Open a terminal and log in to your Heroku account by running the following command:
+
+`heroku login`
+This command will prompt you to enter your Heroku credentials.
+
+Step 3: Prepare Your Flask App
+
+Make sure your Flask application is ready to be deployed. It should include a requirements.txt file that lists all the dependencies and a Procfile that tells Heroku how to run your app. You can create a Procfile with the following content:
+
+
+`web: python app.py`
+
+
+Step 4: Initialize a Git Repository
+
+If your application is not already in a Git repository, initialize one in your project folder:
+
+	git init
+	git add .
+	git commit -m "Initial commit"
+
+Step 5: Create a Heroku App
+Create a new Heroku app with a unique name (replace your-app-name with your chosen name):
+	heroku create your-app-name
+Heroku will generate a URL for your app, and you can access it via this URL.
+
+Step 6: Push Your Code to Heroku
+Push your code to the Heroku app's Git repository:
+
+	git push heroku master
+This command deploys your app to Heroku. You will see the build and deploy process in your terminal.
+
+Step 7: Open Your App
+
+Once the deployment is complete, you can open your app in a web browser using the following command:
+
+	heroku open
+This will open your app in a new browser window.
+
+Step 8: View Logs
+You can view your application's logs to help diagnose issues:
+
+	heroku logs --tail
+Step 9: Scale Your App (Optional)
+
+By default, your app runs on a single web dyno. You can scale it up or down based on your needs. For example, to scale to two web dynos:
+
+	heroku ps:scale web=2
+Step 10: Custom Domain (Optional)
+
+If you have a custom domain, you can configure it in Heroku by following the instructions in the Heroku documentation.

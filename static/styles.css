@@ -1,0 +1,25 @@
+/* Adjust the padding as needed to prevent overlap */
+.navbar .navbar-nav {
+    padding-right: 15px;
+}
+
+/* Styles for printing */
+@media print {
+    .print-only {
+        display: block;
+    }
+
+    .no-print {
+        display: none;
+    }
+}
+
+/* Adjust the top and bottom padding as needed */
+.custom-header {
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.big-smiley {
+    font-size: 10em; /* Adjust the size as needed */
+        }
